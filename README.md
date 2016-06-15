@@ -1,6 +1,6 @@
-# Project 1 - Tipsy
+# Project 1 - Tippy
 
-Tipsy is a tip calculator application for iOS.
+Tippy is a tip calculator application for iOS.
 
 Submitted by: Angela Chen
 
