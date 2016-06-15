@@ -11,10 +11,12 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipSlider: UISlider!
+    var defaultExists = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tipSlider.setValue(Float(defaults.doubleForKey("default_tip_percentage")), animated: false)
         tipLabel.text = String(format: "%.0f%%", tipSlider.value)
         
     }
@@ -32,7 +34,7 @@ class SettingsViewController: UIViewController {
         defaults.setDouble(Double(tipSlider.value), forKey: "default_tip_percentage")
         defaults.synchronize()
         
-        tipSlider.setValue(Float(defaults.doubleForKey("default_tip_percentage")), animated: false)
+        //tipSlider.setValue(Float(defaults.doubleForKey("default_tip_percentage")), animated: false)
     }
 
     
